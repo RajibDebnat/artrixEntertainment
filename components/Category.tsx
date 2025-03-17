@@ -26,7 +26,7 @@ function Category() {
   return (
     <section
       id="category"
-       className="text-white p-10 max-lg:p-8 max-md:p-6 max-sm:p-4 max-[400px]:p-2 rounded-2xl mt-8 flex flex-col items-center justify-center"
+       className="text-white p-10 max-lg:p-8 max-md:p-6 max-sm:p-4 max-[400px]:p-2 rounded-2xl  flex flex-col items-center justify-center"
     >
       <h2 className="text-6xl font-bebas font-bold mb-6 max-md:mb-8 max-sm:mb-9    tracking-wide  font-spicy text-center">
         Category
