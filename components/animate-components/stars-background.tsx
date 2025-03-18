@@ -4,7 +4,6 @@ import React, {
   useState,
   useEffect,
   useRef,
-  RefObject,
   useCallback,
 } from "react";
 
@@ -40,13 +39,17 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
     (width: number, height: number): StarProps[] => {
       const area = width * height;
       const numStars = Math.floor(area * starDensity);
+      const isSmallScreen = width < 500; // Check if screen width is less than 500px
+
       return Array.from({ length: numStars }, () => {
         const shouldTwinkle =
           allStarsTwinkle || Math.random() < twinkleProbability;
         return {
           x: Math.random() * width,
           y: Math.random() * height,
-          radius: Math.random() * 0.05 + 0.5,
+          radius: isSmallScreen
+            ? Math.random() * 0.1 + 1.5 // Larger stars for small screens
+            : Math.random() * 0.05 + 0.5, // Normal size for larger screens
           opacity: Math.random() * 0.5 + 0.5,
           twinkleSpeed: shouldTwinkle
             ? minTwinkleSpeed +
@@ -138,6 +141,5 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
       ref={canvasRef}
       className={cn("h-full w-full absolute inset-0", className)}
     />
-    
   );
 };
