@@ -12,7 +12,10 @@ import Reveal from "./animate-components/Reveal";
 
 function HomeComponent() {
   return (
-    <section id="home" className=" flex -mt-12 max-lg:mt-4  justify-center items-center relative">
+    <section
+      id="home"
+      className=" flex -mt-12 max-lg:mt-4  justify-center items-center relative"
+    >
       {/* <Image className="  object-fill absolute -z-[10]" alt=" black stage background" src={'/stage.jpg'} width={1300} height={1000}/> */}
       <Spotlight className="-top-40 left-0  h-screen w-[50%] " fill="yellow" />
 
@@ -38,16 +41,22 @@ function HomeComponent() {
           </p>
           <h1 className="font-bold max-lg:text-center   font-bebas text-slate-800">
             <TextGenerateEffect words="Where Entertainment Meets Innovation Artrix Entertainment" />
-            
           </h1>
-          <p className=" text-justify font-semibold text-lg mt-4 max-w-[400px]:text-left  w-[90%] max-sm:w-full font-roboto text-slate-200 max-lg:mx-auto  max-md:text-sm max-sm
-          :text-xs">
+          <p
+            className=" max-sm:p-3 font-semibold text-lg mt-4 max-w-[400px]:text-left  w-[90%] max-sm:w-full font-roboto text-slate-200 max-lg:mx-auto  max-md:text-sm max-sm
+          :text-xs"
+          >
             Your One-Stop Solution for Live Entertainment, Talent Partnerships,
             Event Programming, Brand Strategies, and More! At Artrix
             Entertainment, we transform ideas into unforgettable experiences.
           </p>
           <div className="flex max-[400px]:justify-left max-lg:justify-center   mt-8 items-center gap-4  ">
-            <HeroBtn link="/contact-us" className={" max-sm:py-2 max-sm:px-3 font-roboto "}>Get Started </HeroBtn>
+            <HeroBtn
+              link="/contact-us"
+              className={" max-sm:py-2 max-sm:px-3 font-roboto "}
+            >
+              Get Started{" "}
+            </HeroBtn>
 
             <LinkPreview
               className=" flex items-center justify-center bg-primary-yellow rounded-full p-4"
@@ -63,17 +72,17 @@ function HomeComponent() {
         <div className=" flex  justify-center">
           {/* {/* <Image src={}/> */}
           <Reveal width="content fit" direction="x">
-  <Image
-    src={"/hero.png"}
-    alt="hero"
-    width={800}
-    height={600}
-    className="max-lg:-mt-10 mx-auto max-xl:w-[70%] max-sm:h-auto max-lg:mt-12 max-sm:w-full max-xl:h-[70%]"
-  />
-</Reveal>
+            <Image
+              src={"/hero.png"}
+              alt="hero"
+              width={800}
+              height={600}
+              className="max-lg:-mt-10 mx-auto max-xl:w-[70%] max-sm:h-auto max-lg:mt-12 max-sm:w-full max-xl:h-[70%]"
+            />
+          </Reveal>
         </div>
       </div>
-      <ShootingStars starHeight={2} starWidth={15} starColor="primary-yellow"  />
+      <ShootingStars starHeight={2} starWidth={15} starColor="primary-yellow" />
       <StarsBackground />
     </section>
   );
