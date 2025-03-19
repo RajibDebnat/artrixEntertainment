@@ -40,7 +40,8 @@ function HomeComponent() {
             <TextGenerateEffect words="Where Entertainment Meets Innovation Artrix Entertainment" />
             
           </h1>
-          <p className=" font-semibold text-lg mt-4 max-w-[400px]:text-left  w-[90%] max-sm:w-full font-roboto text-slate-200 max-lg:mx-auto  max-md:text-sm">
+          <p className=" text-justify font-semibold text-lg mt-4 max-w-[400px]:text-left  w-[90%] max-sm:w-full font-roboto text-slate-200 max-lg:mx-auto  max-md:text-sm max-sm
+          :text-xs">
             Your One-Stop Solution for Live Entertainment, Talent Partnerships,
             Event Programming, Brand Strategies, and More! At Artrix
             Entertainment, we transform ideas into unforgettable experiences.
