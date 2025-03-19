@@ -36,7 +36,7 @@ const Card: React.FC<CardProps> = ({ heading, para, image, link }) => {
         <CardItem
           as="p"
           translateZ="60"
-          className=" font-roboto  my-4 text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+          className=" font-roboto  font-semibold my-4 text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
         >
           {para}
         </CardItem>

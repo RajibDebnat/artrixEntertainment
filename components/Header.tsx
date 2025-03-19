@@ -1,24 +1,23 @@
-// import Image from "next/image";
-// import React from "react";
-// import HeroBtn from "./animate-components/hero-btn";
+import Image from "next/image";
+import React from "react";
+import HeroBtn from "./animate-components/hero-btn";
+import logo from "../public/logo.png";
+import HeaderBtn from "./animate-components/headerBtn";
 
-// function Nav() {
-//   return (
-//     <header className=" absolute  mt-8 z-40   mx-auto w-[90%] top-0 bg-transparent">
-//       <div className="   flex justify-between w-full  ">
-//         {/* <Image src="/images/logo.svg" alt="logo" width={100} height={100} /> */}
-//         <div className=" flex flex-col font-roboto  font-bold  ">
-//           <p className=" font-bold text-3xl">Artrix</p>
-//           <p className=" font-bold text-lg">Entertainment</p>
-//         </div>
-//         <div>
-//           <HeroBtn className=" " link="/booking">
-//             Book Now
-//           </HeroBtn>
-//         </div>
-//       </div>
-//     </header>
-//   );
-// }
+function Header() {
+  return (
+    <header className=" relative z-40 w-full bg-transparent py-0 px-6 max-sm:px-0">
+      <div className="flex justify-between items-center w-full">
+        {/* Logo */}
+        <Image src={logo} alt="Artrix Entertainment Logo"   width={100} height={100} className=" rounded-full max-lg:h-16  max-lg:w-16" />
 
-// export default Nav;
+        <HeaderBtn link="/booking" className=" max-sm:py-2 max-sm:px-3 font-roboto">
+          Get Started 
+        </HeaderBtn>
+        
+      </div>
+    </header>
+  );
+}
+
+export default Header;

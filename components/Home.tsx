@@ -12,7 +12,7 @@ import Reveal from "./animate-components/Reveal";
 
 function HomeComponent() {
   return (
-    <section id="home" className=" flex  justify-center items-center relative">
+    <section id="home" className=" flex -mt-12 max-lg:mt-4  justify-center items-center relative">
       {/* <Image className="  object-fill absolute -z-[10]" alt=" black stage background" src={'/stage.jpg'} width={1300} height={1000}/> */}
       <Spotlight className="-top-40 left-0  h-screen w-[50%] " fill="yellow" />
 
@@ -27,7 +27,7 @@ function HomeComponent() {
       />
       <Spotlight className="top-28 left-80  h-[80vh] w-[50vw]" fill="white" />
 
-      <div className="flex max-lg:flex-col relative z-30    items-center justify-center gap-16 max-lg:gap-8  w-[90%] max-xl:w-full">
+      <div className="flex max-lg:gap-0 max-lg:flex-col relative z-30    items-center justify-center gap-16   w-[90%] max-xl:w-full">
         <div className=" max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:text-center -mt-16 max-xl:mt-0 w-[65%] max-lg:w-full">
           <p className=" max-sm:text-left max-sm:text-[14px] max-lg:justify-center max-lg:text-center  text-lg font-bold font-roboto flex items-center gap-2">
             {" "}
@@ -38,6 +38,7 @@ function HomeComponent() {
           </p>
           <h1 className="font-bold max-lg:text-center   font-bebas text-slate-800">
             <TextGenerateEffect words="Where Entertainment Meets Innovation Artrix Entertainment" />
+            
           </h1>
           <p className=" font-semibold text-lg mt-4 max-w-[400px]:text-left  w-[90%] max-sm:w-full font-roboto text-slate-200 max-lg:mx-auto  max-md:text-sm">
             Your One-Stop Solution for Live Entertainment, Talent Partnerships,

@@ -16,7 +16,7 @@ function HeroBtn({
         className={` font-roboto flex items-center gap-2   cursor-pointer shadow-[0_0_0_3px_#000000_inset] px-6 py-3 bg-transparent border border-primary-yellow dark:border-primary-yellow dark:text-slate-800 text-black  rounded-lg hover:bg-gradient-to-r font-bold transform hover:-translate-y-1 transition duration-400 bg-gradient-to-r from-primary-yellow to-white ${className} `}
       >
         {children}
-        <span className=" text-2xl">
+        <span className=" text-2xl max-lg:text-xl max-md:text-sm">
           <CiLocationArrow1 />
         </span>{" "}
       </button>
