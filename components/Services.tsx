@@ -9,7 +9,7 @@ function Services() {
        <h2 className="text-6xl my-8 max-md:mb-4  font-bold text-center font-bebas max-md:text-5xl max-sm:text-4xl tracking-wide">
         Our <span className="  text-primary-yellow"> Services</span>
       </h2>
-         <div className="h-[40rem] relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+         <div className=" h-full relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
           <div className="w-full absolute inset-0 h-screen">
             <SparklesCore
               id="tsparticlesfullpage"
