@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import React from "react";
-
+import logo from  "../public/logo.png";
 function Category() {
   // Parent animation variants for staggering children
   const containerVariants = {
@@ -28,9 +28,10 @@ function Category() {
       id="category"
        className="text-white p-10 max-lg:p-8 max-md:p-6 max-sm:p-4 max-[400px]:p-2 rounded-2xl  flex flex-col items-center justify-center"
     >
-      <h2 className="text-6xl font-bebas font-bold mb-6 max-md:mb-8 max-sm:mb-9    tracking-wide  font-spicy text-center">
-        Category
-      </h2>
+      <h2 className="text-6xl my-8 max-md:mb-4  font-bold text-center font-bebas max-md:text-5xl max-sm:text-4xl tracking-wide">
+              Our <Image src={logo} alt="artrix entertainment logo image" height={100} width={100} className=" inline-block rounded-full"/> <span className="  text-primary-yellow"> Category</span>
+            </h2>
+      
       <motion.div
         className="w-[70vw] max-lg:w-full relative -rotate-3 mx-auto grid p-6 max-md:p-0 grid-cols-3 gap-3"
         variants={containerVariants}

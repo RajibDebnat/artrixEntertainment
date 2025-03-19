@@ -8,7 +8,7 @@ import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Header from "@/components/Header";
 import OurNetwork from "@/components/OurNetwork";
-import ProcessOfWork from "@/components/Process";
+import {ProcessSection} from "../components/Process";
 export default function Home() {
   return (
     <main className=" relative py-0 p-10 max-sm:p-4 overflow-x-clip bg-black">
@@ -21,7 +21,7 @@ export default function Home() {
       <Category />
       <WhyChooseUs/>
       <OurNetwork/>
-      <ProcessOfWork/>
+      <ProcessSection/>
     </main>
   );
 }

@@ -3,6 +3,7 @@ import { Meteors } from "./animate-components/meteors";
 import ShineBtn from "./animate-components/ShineBtn";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Reveal from "./animate-components/Reveal";
+import logo from "../public/logo.png";
 function AboutUs() {
   return (
     <section className=" relative  mt-6  overflow-hidden max-xs:p-0 p-10  max-lg:p-4">
@@ -14,8 +15,8 @@ function AboutUs() {
         <Reveal width="" direction="y">
           <h2 className="  max-sm:text-center max-sm:text-5xl max-lg:text-6xl mb-3 font-bebas text-7xl font-bold ">
             {" "}
-            <span className=" text-primary-yellow">Who</span> We Are{" "}
-            <span className=" text-primary-yellow">?</span>
+            <span className=" text-primary-yellow">Who</span> We<Image src={logo} alt="artrix entertainment logo image" height={100} width={100} className=" inline-block rounded-full"/>  Are 
+            <span className=" text-primary-yellow"> ?</span>
           </h2>
           <p className=" max-sm:text-center max-lg:text-sm mb-5 font-roboto leading-[1.3] text-slate-200 text-lg font-semibold">
             Artrix Entertainment is an innovative entertainment consultancy

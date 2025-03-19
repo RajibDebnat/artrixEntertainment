@@ -77,7 +77,7 @@ function HomeComponent() {
               alt="hero"
               width={800}
               height={600}
-              className="max-lg:-mt-10 mx-auto max-xl:w-[70%] max-sm:h-auto max-lg:mt-12 max-sm:w-full max-xl:h-[70%]"
+              className=" mx-auto max-xl:w-[70%] max-sm:h-auto max-lg:mt-12 max-sm:w-full max-xl:h-[70%]"
             />
           </Reveal>
         </div>
