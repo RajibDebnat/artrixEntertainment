@@ -13,7 +13,7 @@ function AboutUs() {
    
         <div className=" w-[50%] max-xl:w-[70%] max-sm:w-full max-sm:flex max-sm:iteme-center  justify-center max-sm:flex-col max-xs:p-0">
         <Reveal width="" direction="y">
-          <h2 className="  max-sm:text-center max-sm:text-5xl max-lg:text-6xl mb-3 font-bebas text-7xl font-bold ">
+          <h2 className="  max-sm:text-center max-sm:text-[44px] max-lg:text-6xl mb-3 font-bebas text-7xl font-bold ">
             {" "}
             <span className=" text-primary-yellow">Who</span> We<Image src={logo} alt="artrix entertainment logo image" height={100} width={100} className=" inline-block rounded-full"/>  Are 
             <span className=" text-primary-yellow"> ?</span>
