@@ -1,42 +1,39 @@
 "use client";
 import React from "react";
 import { services } from "@/lib/data";
-import Card from "./ui/Card";
+
 import { SparklesCore } from './animate-components/sparkles'
 import Image from "next/image";
 import logo from "../public/logo.png";
+import { PinContainer } from "./ui/3d-pin";
 function Services() {
   return (
-    <section id="services" className="p-10 max-md:p-6 max-sm:p-2">
+    <section id="services" className="p-10 max-lg:p-0 max-md:p-6 max-sm:p-2">
        <h2 className="text-6xl my-8 max-md:mb-4  font-bold text-center font-bebas max-md:text-5xl max-sm:text-4xl tracking-wide">
         Our <Image src={logo} alt="artrix entertainment logo image" height={100} width={100} className=" inline-block rounded-full"/> <span className="  text-primary-yellow"> Services</span>
       </h2>
-         <div className=" h-full relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
-          <div className="w-full absolute inset-0 h-screen">
-            <SparklesCore
-              id="tsparticlesfullpage"
-              background="transparent"
-              minSize={0.6}
-              maxSize={1.4}
-              particleDensity={100}
-              className="w-full h-full"
-              particleColor="#FFFFFF"
-            />
+      <div className=" w-full flex items-center max-xl:gap-8  max-lg:gap-12  justify-center max-xl:flex-wrap ">
+        {services.map((service) => (
+          <PinContainer
+          key={service.id}
+          title={service.heading}
+        href={service.link}
+        >
+        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+          <h3 className=" font-roboto tracking-widest max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+            {service.heading}
+          </h3>
+          <div className="text-base font-roboto mb-4  !p-0 font-normal">
+            <span className="text-slate-500 ">
+             {service.para}
+            </span>
           </div>
-       
-     
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {services.map((item) => (
-          <Card
-            key={item.id}
-            heading={item.heading}
-            para={item.para}
-            image={item.image}
-            link={item.link}
-          />
-        ))}
-      </div>
+          
+        <Image src={service.image} alt='service images ' width={400} height={400} className=" object-fill rounded-xl"/>
         </div>
+      </PinContainer>
+        ))}
+    </div>
     </section>
   );
 }
