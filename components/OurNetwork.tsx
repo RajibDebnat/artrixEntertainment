@@ -9,7 +9,7 @@ function OurNetwork() {
       className=" max-sm:px-2  mt-10 max-md:mt-5 max-sm:mt-2 px-10 overflow-x-hidden rounded-xl"
     >
       <h2 className="text-6xl my-8 max-md:mb-4  font-bold text-center font-bebas max-md:text-5xl max-sm:text-4xl tracking-wide">
-        Our <Image src={logo} alt="artrix entertainment logo image" height={100} width={100} className=" inline-block rounded-full"/> <span className=" text-primary-yellow"> Network</span>
+        Our <Image src={logo} alt="artrix entertainment logo image" height={100} width={100} className=" max-[344px]:hidden inline-block rounded-full"/> <span className=" text-primary-yellow"> Network</span>
       </h2>
       <Marquee className=" gap-4 h-36 rounded-xl  overflow-y-hidden   items-center text-slate-800">
         <h1 className="  max-sm:text-5xl   px-4  mx-6 text-6xl font-bold font-bebas tracking-wider text-primary-yellow ">

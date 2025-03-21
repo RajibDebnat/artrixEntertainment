@@ -16,7 +16,7 @@ function Services() {
           alt="artrix entertainment logo image"
           height={100}
           width={100}
-          className=" inline-block rounded-full"
+          className="max-[344px]:hidden inline-block rounded-full"
         />{" "}
         <span className="  text-primary-yellow"> Services</span>
       </h2>

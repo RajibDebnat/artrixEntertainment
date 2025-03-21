@@ -45,7 +45,7 @@ export function ProcessSection() {
     <section id="process" className="p-10 max-md:p-6 max-sm:p-2">
       
       <h2 className="text-6xl my-8 max-md:mb-4  font-bold text-center font-bebas max-md:text-5xl max-sm:text-4xl tracking-wide">
-        Our <Image src={logo} alt="artrix entertainment logo image" height={100} width={100} className=" inline-block rounded-full"/> <span className="  text-primary-yellow"> Process</span>
+        Our <Image src={logo} alt="artrix entertainment logo image" height={100} width={100} className=" max-[344px]:hidden inline-block rounded-full"/> <span className="  text-primary-yellow"> Process</span>
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
