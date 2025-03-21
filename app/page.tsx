@@ -9,6 +9,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Header from "@/components/Header";
 import OurNetwork from "@/components/OurNetwork";
 import {ProcessSection} from "../components/Process";
+import SuccessStory from "@/components/SuccessStory";
 export default function Home() {
   return (
     <main className=" relative py-0 p-10 max-sm:p-4 overflow-x-clip bg-black">
@@ -22,6 +23,7 @@ export default function Home() {
       <WhyChooseUs/>
       <OurNetwork/>
       <ProcessSection/>
+      <SuccessStory />
     </main>
   );
 }
