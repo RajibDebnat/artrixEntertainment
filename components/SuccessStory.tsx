@@ -25,7 +25,7 @@ function SuccessStory() {
       </h2>
       <Marquee speed={80} className=" gap-10 rounded-xl">
         {successStory1.map((story) => (
-          <div key={story.id} className="flex h-80 rounded-xl  mx-8 items-center space-x-4 gap-10">
+          <div key={story.id} className="flex h-80 max-md:h-64 max-sm:h-52 rounded-xl  mx-8 items-center space-x-4 gap-10">
             <Image
               src={story.image}
               alt={story.name}
