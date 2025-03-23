@@ -33,6 +33,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Favicon */}
+        <link rel="icon" href="/logo.png" type="image/png" />
+        <title>ARTRIX ENTERTAINMENT</title>
+      </head>
       <body
         className={`${roboto.variable} ${merriweather.variable} ${bebasNeue.variable}`}
       >
