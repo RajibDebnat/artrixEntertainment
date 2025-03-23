@@ -92,14 +92,14 @@ function HomeComponent() {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.8 }}
-          className="absolute w-full h-full flex justify-center items-center"
+          className="absolute w-full h-full flex justify-center items-center max-sm:-mt-24 "
         >
           <Image
             src={heroImage[currentIndex].image}
             alt={heroImage[currentIndex].alt}
             width={800}
             height={600}
-            className="mx-auto max-xl:w-[70%] max-sm:h-auto max-lg:mt-12 max-sm:w-[50%]  object-cover"
+            className="mx-auto max-xl:w-[70%] max-sm:h-auto max-lg:mt-12 max-sm:w-[50%]  max-sm:mt-0 object-cover "
           />
         </motion.div>
       </AnimatePresence>
