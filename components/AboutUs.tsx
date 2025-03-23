@@ -6,7 +6,7 @@ import Reveal from "./animate-components/Reveal";
 import logo from "../public/logo.png";
 function AboutUs() {
   return (
-    <section className=" relative  mt-6  overflow-hidden max-xs:p-0 p-10  max-lg:p-4">
+    <section className=" relative  mt-12  overflow-hidden max-xs:p-0 p-10  max-lg:p-4">
       <div className=" flex   max-md:flex-col  basis-[50%] justify-center items-center gap-16  px-8 max-xl:px-4 max-xs:p-0 max-sm:gap-8">
         <div className=" w-[50%] max-xl:w-[70%] max-sm:w-full max-sm:flex max-sm:iteme-center  justify-center max-sm:flex-col max-xs:p-0">
           <Reveal width="" direction="y">

@@ -35,11 +35,27 @@ const Footer = () => {
         <div className="mb-6 md:mb-0">
           <h2 className="text-xl font-semibold mb-2 tracking-widest  font-bebas">Services</h2>
           <ul className="space-y-1 text-sm font-roboto">
-            <li>Artist Curation</li>
-            <li>Live Production Solutions</li>
-            <li>Brand Collaboration</li>
-            <li>Artist & Celebrity Management</li>
-          </ul>
+  <li>
+    <Link href="/services/artistcuration" className="hover:text-primary-yellow">
+      Artist Curation
+    </Link>
+  </li>
+  <li>
+    <Link href="/services/liveproduction" className="hover:text-primary-yellow">
+      Live Production Solutions
+    </Link>
+  </li>
+  <li>
+    <Link href="/services/brandcollabe" className="hover:text-primary-yellow">
+      Brand Collaboration
+    </Link>
+  </li>
+  <li>
+    <Link href="/services/celebrity-management" className="hover:text-primary-yellow">
+      Artist & Celebrity Management
+    </Link>
+  </li>
+</ul>
         </div>
 
         {/* Right Side - Contact Details */}
@@ -69,7 +85,7 @@ const Footer = () => {
 
       {/* Bottom Line */}
       <div className="mt-8 text-center text-xs text-gray-500">
-        © 2025 Company Name. All rights reserved.
+        © 2025 Artrix Entertainment. All rights reserved.
       </div>
     </footer>
   );

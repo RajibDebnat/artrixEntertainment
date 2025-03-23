@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { TextGenerateEffect } from "./animate-components/text-generate-effect";
 import { Spotlight } from "./animate-components/Spotlight";
@@ -9,12 +10,26 @@ import { GiMicrophone } from "react-icons/gi";
 import { LinkPreview } from "./animate-components/link-preview";
 import { FaPlay } from "react-icons/fa";
 import Reveal from "./animate-components/Reveal";
-
+import { useState, useEffect } from "react";
+import { heroImage } from "../lib/data";
+import { AnimatePresence, motion } from "framer-motion";
 function HomeComponent() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Automatically change image every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === heroImage.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section
       id="home"
-      className=" flex -mt-12 max-lg:mt-4  justify-center items-center relative"
+      className=" flex mt-12 max-lg:mt-4  justify-center items-center relative"
     >
       {/* <Image className="  object-fill absolute -z-[10]" alt=" black stage background" src={'/stage.jpg'} width={1300} height={1000}/> */}
       <Spotlight className="-top-40 left-0  h-screen w-[50%] " fill="yellow" />
@@ -69,18 +84,26 @@ function HomeComponent() {
           {/* <HeroBtn /> */}
         </div>
 
-        <div className=" flex  justify-center">
-          {/* {/* <Image src={}/> */}
-          <Reveal width="content fit" direction="x">
-            <Image
-              src={"/hero.png"}
-              alt="hero"
-              width={800}
-              height={600}
-              className=" mx-auto max-xl:w-[70%] max-sm:h-auto max-lg:mt-12 max-sm:w-full max-xl:h-[70%]"
-            />
-          </Reveal>
-        </div>
+        <div className="flex justify-center items-center relative  h-[600px] w-[600px]">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentIndex}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.8 }}
+          className="absolute w-full h-full flex justify-center items-center"
+        >
+          <Image
+            src={heroImage[currentIndex].image}
+            alt={heroImage[currentIndex].alt}
+            width={800}
+            height={600}
+            className="mx-auto max-xl:w-[70%] max-sm:h-auto max-lg:mt-12 max-sm:w-[50%]  object-cover"
+          />
+        </motion.div>
+      </AnimatePresence>
+    </div>
       </div>
       <ShootingStars starHeight={2} starWidth={15} starColor="primary-yellow" />
       <StarsBackground />
