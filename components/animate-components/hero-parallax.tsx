@@ -105,12 +105,15 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="max-w-[70%] relative  py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className=" font-bebas text-2xl md:text-7xl font-bold dark:text-white">
-      <span className=" text-8xl text-primary-yellow"> Artrix Entertainment</span> Book Top Artists & Celebrities for Unforgettable Experiences
-      </h1>
-      <p className=" font-roboto max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-      At Artrix Entertainment, we make artist and celebrity bookings effortless, ensuring you get the perfect talent for your event. Whether you're planning a concert, corporate event, brand collaboration, or private gathering, we connect you with top artists, musicians, and influencers to create unforgettable experiences.
-      </p>
+     <h1 className="font-bebas text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold dark:text-white md:text-left leading-tight">
+  <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary-yellow">
+    Artrix Entertainment
+  </span>
+  Book Top Artists & Celebrities for Unforgettable Experiences
+</h1>
+<p className="font-roboto max-w-xl text-sm sm:text-base md:text-lg lg:text-xl mt-6 md:mt-8 dark:text-neutral-200  md:text-left leading-relaxed">
+  At Artrix Entertainment, we make artist and celebrity bookings effortless, ensuring you get the perfect talent for your event. Whether you're planning a concert, corporate event, brand collaboration, or private gathering, we connect you with top artists, musicians, and influencers to create unforgettable experiences.
+</p>
     </div>
   );
 };
