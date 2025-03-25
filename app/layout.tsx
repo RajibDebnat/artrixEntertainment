@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { Roboto, Merriweather, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
-
+import Header from '../components/Header'
+import { FloatingNav } from "@/components/animate-components/floating-navbar";
+import { navbar } from "@/lib/data";
+import Footer from "@/components/Footer";
 const roboto = Roboto({
   weight: ["100", "200", "300", "400", "700", "800", "900"],
   subsets: ["latin"],
@@ -39,8 +42,10 @@ export default function RootLayout({
         <title>ARTRIX ENTERTAINMENT</title>
       </head>
       <body
-        className={`${roboto.variable} ${merriweather.variable} ${bebasNeue.variable}`}
+        className={` bg-black ${roboto.variable} ${merriweather.variable} ${bebasNeue.variable}`}
       >
+    <Header />
+    <FloatingNav navItems={navbar} />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -50,6 +55,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <Footer/>
       </body>
     </html>
   );

@@ -15,8 +15,7 @@ export default function Home() {
   return (
     <main className=" relative py-0 p-10 max-sm:p-4 overflow-x-clip bg-black">
       {/* <Nav /> */}
-      <Header />
-      <FloatingNav navItems={navbar} />
+   
       <HomeComponent />
       <AboutUs/>
       <Services/>
