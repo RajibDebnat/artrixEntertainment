@@ -24,7 +24,7 @@ export default function Home() {
       <OurNetwork/>
       <ProcessSection/>
       <SuccessStory />
-      <Footer />
+   
     </main>
   );
 }
