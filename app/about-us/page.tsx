@@ -8,7 +8,7 @@ function page() {
   return (
     <main className=' p-10 max-lg:p-6 max-md:p-4  overflow-x-hidden  max-sm:p-0'>
       <Hero/>
-      <WhoWeAre/>
+      {/* <WhoWeAre/> */}
       <Services/>
       <ProcessSection/>
       <SuccessStoryAbout/>
