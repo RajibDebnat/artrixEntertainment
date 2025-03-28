@@ -9,15 +9,9 @@ import { PinContainer } from "./ui/3d-pin";
 function Services() {
   return (
     <section id="services" className="p-10 max-lg:p-0 max-md:p-6 max-sm:p-2">
-      <h2 className="text-6xl my-8 max-md:mb-4  font-bold text-center font-bebas max-md:text-5xl max-sm:text-4xl tracking-wide">
+      <h2 className="text-6xl my-8 max-md:mb-4  font-bold text-center font-bebas max-md:text-5xl max-sm:text-4xl tracking-wider">
         Our{" "}
-        <Image
-          src={logo}
-          alt="artrix entertainment logo image"
-          height={100}
-          width={100}
-          className="max-[344px]:hidden inline-block rounded-full"
-        />{" "}
+      
         <span className="  text-primary-yellow"> Services</span>
       </h2>
       <div className=" w-full flex items-center max-xl:gap-8  max-lg:gap-12  justify-center max-xl:flex-wrap ">

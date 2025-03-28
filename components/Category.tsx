@@ -28,8 +28,8 @@ function Category() {
       id="category"
        className="text-white p-10 max-lg:p-8 max-md:p-6 max-sm:p-4 max-[400px]:p-2 rounded-2xl  flex flex-col items-center justify-center"
     >
-      <h2 className="text-6xl my-8 max-md:mb-4  font-bold text-center font-bebas max-md:text-5xl max-sm:text-4xl tracking-wide">
-              Our <Image src={logo} alt="artrix entertainment logo image" height={100} width={100} className=" max-[344px]:hidden inline-block rounded-full"/> <span className="  text-primary-yellow"> Category</span>
+      <h2 className="text-6xl my-8 max-md:mb-4  font-bold text-center font-bebas max-md:text-5xl max-sm:text-4xl tracking-wider">
+              Our  <span className="  text-primary-yellow"> Category</span>
             </h2>
       
       <motion.div

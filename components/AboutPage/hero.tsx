@@ -3,17 +3,19 @@ import React from "react";
 // "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { HeroParallax } from "../animate-components/hero-parallax";
-import { products } from "@/lib/data";
-import logo from  "../../public/logo.png";
+
 import { cn } from "@/lib/utils"; // This line is removed
-import ShineBtn from "../animate-components/ShineBtn";
+import { HeroHighlight } from "../animate-components/hero-highlight";
+import { Highlight } from "../animate-components/hero-highlight";
+import { motion } from "framer-motion";
 import HeaderBtn from "../animate-components/headerBtn";
+
+import { words } from "@/lib/data";
 export default function Hero() {
   const router = useRouter();
   return (
     <section>
-      <div className="relative flex h-[50rem] w-full items-center justify-center bg-white dark:bg-black">
+      <div className="relative flex h-[40rem] w-full items-center justify-center bg-white  dark:bg-black">
         <div
           className={cn(
             "absolute inset-0",
@@ -25,24 +27,38 @@ export default function Hero() {
         {/* Radial gradient for the container to give a faded look */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
         <div className=" relative z-30 flex flex-col items-center justify-start min-h-[60vh] text-center px-6">
-        <h1 className="text-8xl my-4 max-md:mb-4  font-bold text-center font-bebas max-md:text-6xl max-sm:text-5xl tracking-wide">
-        Artrix{" "}
-        <Image
-          src={logo}
-          alt="artrix entertainment logo image"
-          height={100}
-          width={100}
-          className="max-[344px]:hidden inline-block rounded-full"
-        />{" "}
-        <span className="  text-primary-yellow"> Entertainment</span>
-      </h1>
-          <p className=" max-w-[70%] mx-auto mb-8 font-roboto text-xl font-thin ">
-          Your One-Stop Solution for Live Entertainment, Talent Partnerships, Event Programming, Brand
-          Strategies, and More! At Artrix Entertainment, we transform ideas into unforgettable experiences. Whether it's live events,
-          influencer campaigns, or brand activations, we bring passion, creativity, and expertise to every project.
+      
+      <motion.h1
+        initial={{
+          opacity: 0,
+          y: 20,
+        }}
+        animate={{
+          opacity: 1,
+          y: [20, -5, 0],
+        }}
+        transition={{
+          duration: 0.5,
+          ease: [0.4, 0.0, 0.2, 1],
+        }}
+        className="text-7xl  font-bebas tracking-wider max-lg:p-0  px-4 max-md:text-4xl max-lg:text-5xl font-bold text-neutral-700 dark:text-white  leading-relaxed lg:leading-snug text-center mx-auto "
+      >
+      Know About <br/>
+        <Highlight className=" text-slate-900 pl-2">
+          Artrix Entertainment
+        </Highlight>
+      </motion.h1>
+    
+          {/* <TypewriterEffectSmooth words={words}/> */}
+          <p className=" w-[70%] max-lg:w-[90%] max-md:w-full mx-auto my-8 font-roboto text-xl max-lg:text-lg max-md:text-sm font-thin max-md:font-normal ">
+            Artrix Entertainment is your visionary partner in creating
+            extraordinary brand and event experiences. We fuse creativity with
+            strategy to deliver live entertainment, influencer campaigns, and
+            immersive activations that captivate audiences and spark measurable
+            growth.
           </p>
-        
-        <HeaderBtn link="/services">Our Services</HeaderBtn>
+
+          <HeaderBtn link="/services">Our Services</HeaderBtn>
         </div>
       </div>
     </section>

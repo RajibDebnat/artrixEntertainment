@@ -20,7 +20,7 @@ function SuccessStory() {
       {/* Radial gradient for the container to give a faded look */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
     <div>
-      <h2 className="text-6xl my-8 max-md:mb-4 relative z-40  font-bold text-center font-bebas max-md:text-5xl max-sm:text-4xl tracking-wide">
+      <h2 className="text-6xl my-8 max-md:mb-4 relative z-40  font-bold text-center font-bebas max-md:text-5xl max-sm:text-4xl tracking-wider">
         Our <Image src={logo} alt="artrix entertainment logo image" height={100} width={100} className=" max-[344px]:hidden inline-block rounded-full"/> <span className="  text-primary-yellow"> Success Stories</span>
       </h2>
       <Marquee direction="right" speed={80} className=" rounded-xl">
