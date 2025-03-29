@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function VideoDisplay() {
   return (
     <section id="video-display" className="py-16">
-       <h2 className=" my-8 text-center text-6xl font-bebas tracking-wider font-bold">Lights Camera <span className=" text-primary-yellow"> Artrix</span> </h2>
+       <h2 className=" my-8 text-center text-6xl max-md:text-5xl max-sm:text-4xl font-bebas tracking-wider font-bold">Lights Camera <span className=" text-primary-yellow"> Artrix</span> </h2>
     <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
       <GridItem
         area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"

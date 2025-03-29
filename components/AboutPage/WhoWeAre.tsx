@@ -10,7 +10,7 @@ const WhoWeAre = () => {
     return (
       <section className="py-16">
      <div>
-      <h2 className=" my-8 text-center text-6xl font-bebas tracking-wider font-bold">About <span className=" text-primary-yellow">Us</span> </h2>
+      <h2 className=" my-8 text-center text-6xl  max-md:text-5xl max-sm:text-4xl   font-bebas tracking-wider font-bold">About <span className=" text-primary-yellow">Us</span> </h2>
 
       <div>
       <BentoGrid className="max-w-4xl mx-auto">
