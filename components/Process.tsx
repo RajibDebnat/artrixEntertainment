@@ -42,7 +42,7 @@ export function ProcessSection() {
     },
   ];
   return (
-    <section id="process" className="p-10 max-md:p-6 max-sm:p-2">
+    <section id="process" className="p-10 mt-8 max-md:p-6 max-sm:p-2">
       
       <h2 className="text-6xl my-8 max-md:mb-4  font-bold text-center font-bebas max-md:text-5xl max-sm:text-4xl tracking-wider">
         Our <span className="  text-primary-yellow"> Process</span>
