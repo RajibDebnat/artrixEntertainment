@@ -4,11 +4,13 @@ import React from 'react'
 import {ProcessSection} from '@/components/Process'
 import Services from '@/components/Services';
 import WhoWeAre from '@/components/AboutPage/WhoWeAre';
+import VideoDisplay from '@/components/AboutPage/videodisplay';
 function page() {
   return (
-    <main className=' p-10 max-lg:p-6 max-md:p-4  overflow-x-hidden  max-sm:p-0'>
+    <main className=' p-10 max-lg:p-6 max-md:p-4  overflow-x-hidden  max-sm:p-2'>
       <Hero/>
-      {/* <WhoWeAre/> */}
+      <WhoWeAre/>
+      <VideoDisplay/>
       <Services/>
       <ProcessSection/>
       <SuccessStoryAbout/>

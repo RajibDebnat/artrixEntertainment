@@ -4,6 +4,7 @@ import Image from "next/image";
 import { successStory1 ,successStory2} from "@/lib/data";
 import {cn} from "@/lib/utils";
 import logo from "../../public/logo.png";
+import Reveal from "../animate-components/Reveal";
 function SuccessStoryAbout() {
   return (
 <section className=" pt-0 p-10 max-lg:p-6 max-md:p-4  max-sm:p-0">
