@@ -3,9 +3,10 @@ import nodemailer from "nodemailer";
 
 export async function POST(req) {  // ❌ Remove ": Request"
     try {
-        const formData = await req.formData();
+        // Parse FormData
+        const formData = await req.formData();  // ✅ Use req.formData() correctly for FormData
 
-        // Extract form data
+        // Extract form fields
         const name = formData.get("name");
         const email = formData.get("email");
         const phone = formData.get("phone");
@@ -15,8 +16,16 @@ export async function POST(req) {  // ❌ Remove ": Request"
         const startDate = formData.get("start_date");
         const endDate = formData.get("end_date");
         const description = formData.get("description");
-        const file = formData.get("file");
         const serviceType = formData.get("service_type");
+
+        let fileBuffer = null;
+        let fileName = "";
+
+        const file = formData.get("file");
+        if (file) {
+            fileBuffer = Buffer.from(await file.arrayBuffer());
+            fileName = file.name;
+        }
 
         // Configure SendGrid Transporter
         const transporter = nodemailer.createTransport({
@@ -28,14 +37,11 @@ export async function POST(req) {  // ❌ Remove ": Request"
             },
         });
 
-        // Dynamic Email Subject based on service type
-        const emailSubject = `New ${serviceType} Service Request`;
-
-        // Create email content
+        // Email content
         const mailOptions = {
             from: process.env.EMAIL_FROM,
             to: process.env.EMAIL_TO,
-            subject: emailSubject,
+            subject: `New ${serviceType} Service Request`,
             text: `
                 Service Type: ${serviceType}
                 Name: ${name}
@@ -48,19 +54,17 @@ export async function POST(req) {  // ❌ Remove ": Request"
                 End Date: ${endDate}
                 Description: ${description}
             `,
-            attachments: [],
+            attachments: fileBuffer
+                ? [
+                      {
+                          filename: fileName,
+                          content: fileBuffer,
+                      },
+                  ]
+                : [],
         };
 
-        // Attach file if exists
-        if (file) {
-            const fileBuffer = Buffer.from(await file.arrayBuffer());
-            mailOptions.attachments.push({
-                filename: file.name,
-                content: fileBuffer,
-            });
-        }
-
-        // Send Email
+        // Send email
         await transporter.sendMail(mailOptions);
         return NextResponse.json({ message: "Email sent successfully!" }, { status: 200 });
 

@@ -2,14 +2,26 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 export default function EventBookingForm() {
     const router = useRouter();
+    const pathname = usePathname(); // Get current page path
     const [submitted, setSubmitted] = useState(false);
     const [eventType, setEventType] = useState('');
     const [file, setFile] = useState<File | null>(null);
     const [loading, setLoading] = useState(false);
+
+    // Map pathname to service type
+    const getServiceType = () => {
+        if (pathname.includes('/services/liveproduction')) return 'Live Production';
+        if (pathname.includes('/services/artistcuration')) return 'Artist Curation';
+        if (pathname.includes('/services/artistmanagement')) return 'Artist Management';
+        if (pathname.includes('/services/brandcollaboration')) return 'Brand Collaboration';
+        return 'Other';
+    };
+
+    const serviceType = getServiceType();
 
     useEffect(() => {
         if (submitted) {
@@ -29,6 +41,8 @@ export default function EventBookingForm() {
         setLoading(true);
 
         const formData = new FormData(event.currentTarget);
+        formData.append('service_type', serviceType); // Add service type to form data
+
         if (file) {
             formData.append('file', file);
         }
@@ -64,8 +78,10 @@ export default function EventBookingForm() {
                     </div>
                 ) : (
                     <form onSubmit={handleSubmit} className="space-y-4">
-                        <h2 className="text-2xl font-bold text-center">Event Booking Form</h2>
-                        
+                        <h2 className="text-2xl font-bold text-center">{serviceType} Booking Form</h2>
+
+                        <input type="hidden" name="service_type" value={serviceType} /> {/* Hidden Input Field */}
+
                         <div>
                             <label htmlFor="name" className="block font-medium">Full Name</label>
                             <input id="name" type="text" name="name" required className="w-full p-2 border rounded-md" />
