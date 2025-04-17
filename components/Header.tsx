@@ -7,7 +7,7 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <header className=" relative z-40 w-full bg-transparent py-0 px-6 max-sm:px-0">
+    <header className=" relative z-40 w-full bg-transparent  py-0 px-6 max-sm:px-0">
       <div className="flex justify-between items-center w-full">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -21,7 +21,7 @@ function Header() {
         </Link>
 
         <HeaderBtn
-          link="/booking"
+          link="/services"
           className=" max-sm:py-2 max-sm:px-3 font-roboto"
         >
           Get Started

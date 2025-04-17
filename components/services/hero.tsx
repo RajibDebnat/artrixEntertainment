@@ -16,20 +16,9 @@ import Reveal from "../animate-components/Reveal";
 export default function Hero() {
   const router = useRouter();
   return (
-    <section className=" flex mt-12 max-lg:mt-4  justify-center items-center relative">
+    <section className=" flex -mt-16 max-lg:mt-4  justify-center items-center relative">
          {/* <Image className="  object-fill absolute -z-[10]" alt=" black stage background" src={'/stage.jpg'} width={1300} height={1000}/> */}
-              <Spotlight className="-top-40 left-0  h-screen w-[50%] " fill="yellow" />
-        
-              <Spotlight className=" top-0  right-full " />
-              <Spotlight
-                className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-                fill="white"
-              />
-              <Spotlight
-                className="top-10 left-full      h-[80vh] w-[50vw]"
-                fill="yellow"
-              />
-              <Spotlight className="top-28 left-80  h-[80vh] w-[50vw]" fill="white" />
+             
       <div className="relative flex h-[40rem] w-full items-center justify-center bg-white  dark:bg-black">
         <div
           className={cn(
@@ -75,7 +64,7 @@ export default function Hero() {
           </p>
     </Reveal>
 
-          <HeaderBtn className=" text-roboto" link="/services">Services</HeaderBtn>
+          <HeaderBtn className=" text-roboto" link="/about-us">About Us</HeaderBtn>
         </div>
       </div>
     </section>

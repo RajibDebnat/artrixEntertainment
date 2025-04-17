@@ -67,7 +67,7 @@ function HomeComponent() {
           </p>
           <div className="flex max-[400px]:justify-left max-lg:justify-center   mt-8 items-center gap-4  ">
             <HeroBtn
-              link="/contact-us"
+              link="/services"
               className={" max-sm:py-2 max-sm:px-3 font-roboto "}
             >
               Get Started{" "}
