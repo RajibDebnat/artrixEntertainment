@@ -11,6 +11,7 @@ export default function EventBookingForm() {
     const pathname = usePathname();
     const [submitted, setSubmitted] = useState(false);
     const [eventType, setEventType] = useState('');
+    const [artistGenre, setArtistGenre] = useState('');
     const [loading, setLoading] = useState(false);
     const [artistInput, setArtistInput] = useState('');
     const [filteredArtists, setFilteredArtists] = useState<string[]>([]);
@@ -117,31 +118,62 @@ export default function EventBookingForm() {
                             <div>
                                 <label htmlFor="artist" className="block font-semibold font-roboto text-yellow-500">Artist Name</label>
                                 <input 
-    id="artist" 
-    type="text" 
-    name="artist" 
-    required 
-    autoComplete="off"
-    className="w-full p-2 border rounded-md"
-    value={artistInput}
-    onChange={(e) => setArtistInput(e.target.value)}
-    list="artist-suggestions"
-/>
-{filteredArtists.length > 0 && (
-    <ul className="border mt-2 rounded-md w-full max-h-40 overflow-auto">
-        {filteredArtists.map((artist) => (
-            <li key={artist} className="p-2 cursor-pointer" onClick={() => setArtistInput(artist)}>
-                {artist}
-            </li>
-        ))}
-    </ul>
-)}
-<datalist id="artist-suggestions">
-    {filteredArtists.map((artist) => (
-        <option key={artist} value={artist} />
-    ))}
-</datalist>
+                                    id="artist" 
+                                    type="text" 
+                                    name="artist" 
+                                    required 
+                                    autoComplete="off"
+                                    className="w-full p-2 border rounded-md"
+                                    value={artistInput}
+                                    onChange={(e) => setArtistInput(e.target.value)}
+                                    list="artist-suggestions"
+                                />
+                                {filteredArtists.length > 0 && (
+                                    <ul className="border mt-2 rounded-md w-full max-h-40 overflow-auto">
+                                        {filteredArtists.map((artist) => (
+                                            <li key={artist} className="p-2 cursor-pointer" onClick={() => setArtistInput(artist)}>
+                                                {artist}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                                <datalist id="artist-suggestions">
+                                    {filteredArtists.map((artist) => (
+                                        <option key={artist} value={artist} />
+                                    ))}
+                                </datalist>
                             </div>
+
+                            <div>
+                                <label htmlFor="artist_genre" className="block font-semibold font-roboto text-yellow-500">Artist Genre</label>
+                                <select 
+                                    id="artist_genre" 
+                                    name="genre" 
+                                    required 
+                                    className="w-full p-2 border rounded-md"
+                                    onChange={(e) => setArtistGenre(e.target.value)}
+                                >
+                                    <option value="">Select Genre</option>
+                                    <option value="bollywood_celebrity">Bollywood Celebrity</option>
+                                    <option value="actor">Actor</option>
+                                    <option value="actress">Actress</option>
+                                    <option value="singer">Singer</option>
+                                    <option value="band">Band</option>
+                                    <option value="influencer">Influencer</option>
+                                    <option value="motivational_speaker">Motivational Speaker</option>
+                                    <option value="sports_person">Sports Person</option>
+                                    <option value="stand_up_comedian">Stand-up Comedian</option>
+                                    <option value="host">Host</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+
+                            {artistGenre === 'others' && (
+                                <div>
+                                    <label htmlFor="artist_genre_other" className="block font-semibold font-roboto text-yellow-500">Please Describe</label>
+                                    <textarea id="artist_genre_other" name="artist_genre_other" required className="w-full p-2 border rounded-md" />
+                                </div>
+                            )}
 
                             <div>
                                 <label htmlFor="event_type" className="block font-semibold font-roboto text-yellow-500">Event Type</label>
@@ -196,3 +228,4 @@ export default function EventBookingForm() {
         </div>
     );
 }
+ 

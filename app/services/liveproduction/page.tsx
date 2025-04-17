@@ -72,11 +72,11 @@ export default function LiveProduction() {
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
        
         <motion.div 
-            className=" w-[40%] relative z-40 flex flex-col items-center justify-center p-4"
+            className=" w-[40%] max-lg:w-[70%]   max-md:w-full relative z-40 flex flex-col items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
         >
-                <h2 className=" max-sm:text-center max-sm:text-[44px] max-lg:text-6xl mb-3 font-bebas text-7xl font-bold tracking-wider">{serviceType} </h2>
+                <h2 className="  max-sm:text-[44px] max-lg:text-6xl mb-3 text-center font-bebas text-7xl font-bold tracking-wider">{serviceType} </h2>
             <div className="border-[1px] border-primary-yellow shadow-lg rounded-xl p-6  w-full">
                 {submitted ? (
                     <div className="text-center">
