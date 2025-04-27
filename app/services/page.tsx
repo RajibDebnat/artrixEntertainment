@@ -2,10 +2,13 @@ import Services from "@/components/Services";
 import Hero from "@/components/services/hero";
 import React from "react";
 import { Spotlight } from "@/components/animate-components/Spotlight";
-
+export const metadata = {
+  title: "Artrix Entertainment Service | artist booking Services ",
+  description: "Explore our taxi services between India and Bhutan. Safe, reliable, and comfortable travel.",
+};
 function page() {
   return (
-    <main className=' p-10 max-lg:p-6 max-md:p-4  max-sm:p-2 overflow-x-hidden '>
+    <main className=' p-10 max-lg:p-6 max-md:p-4  max-sm:p-2 overflow-x-clip '>
        <Spotlight className="-top-40 left-0  h-screen w-[50%] " fill="yellow" />
               
                     <Spotlight className=" top-0  right-full " />
