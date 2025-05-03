@@ -1,40 +1,39 @@
 "use client";
 import React from "react";
 import { services } from "@/lib/data";
-
 import { SparklesCore } from "./animate-components/sparkles";
 import Image from "next/image";
 import logo from "../public/logo.png";
 import { PinContainer } from "./ui/3d-pin";
+
 function Services() {
   return (
-    <section id="services" className="p-10 max-lg:p-0 max-md:p-6 max-sm:p-2">
-      <h2 className="text-6xl my-8 max-md:mb-4  font-bold text-center font-bebas max-md:text-5xl max-sm:text-4xl tracking-wider">
-        Our{" "}
-      
-        <span className="  text-primary-yellow"> Services</span>
+    <section id="services" className="px-4 py-10  max-2xl:px-6">
+      <h2 className="text-center text-4xl sm:text-5xl md:text-6xl font-bold font-bebas tracking-wider mb-10">
+        Our <span className="text-primary-yellow">Services</span>
       </h2>
-      <div className=" w-full flex items-center max-xl:gap-8  max-lg:gap-12  justify-center max-xl:flex-wrap ">
+
+      <div className="mx-auto grid  gap-y-14 gap-x-2 grid-cols-2  max-lg:grid-cols-1 max-w-7xl">
         {services.map((service) => (
           <PinContainer
             key={service.id}
             title={service.heading}
             href={service.link}
           >
-            <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-              <h3 className=" font-roboto tracking-widest max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+            <div className="flex flex-col p-4 max-sm:p-0 tracking-tight text-slate-100/50 w-[30em] max-xl:w-[25em] max-sm:w-[16em] max-sm:h-[18em] max-lg:w-[20em] h-[20em]">
+              <h3 className="font-roboto tracking-widest font-bold text-base text-slate-100 mb-2">
                 {service.heading}
               </h3>
-              <div className="text-base font-roboto mb-4  !p-0 font-normal">
-                <span className="text-slate-500 ">{service.para}</span>
-              </div>
+              <p className="text-slate-500 text-sm font-roboto mb-4">
+                {service.para}
+              </p>
 
               <Image
                 src={service.image}
-                alt="service images "
+                alt="service image"
                 width={400}
                 height={400}
-                className=" object-fill rounded-xl"
+                className="w-full h-auto object-cover rounded-xl"
               />
             </div>
           </PinContainer>

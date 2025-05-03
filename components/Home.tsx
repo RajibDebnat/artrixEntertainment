@@ -32,7 +32,7 @@ function HomeComponent() {
       className=" flex mt-12 max-lg:mt-4  justify-center items-center relative"
     >
       {/* <Image className="  object-fill absolute -z-[10]" alt=" black stage background" src={'/stage.jpg'} width={1300} height={1000}/> */}
-      <Spotlight className="-top-40 left-0  h-screen w-[50%] " fill="yellow" />
+      {/* <Spotlight className="-top-40 left-0  h-screen w-[50%] " fill="yellow" />
 
       <Spotlight className=" top-0  right-full " />
       <Spotlight
@@ -43,7 +43,7 @@ function HomeComponent() {
         className="top-10 left-full      h-[80vh] w-[50vw]"
         fill="yellow"
       />
-      <Spotlight className="top-28 left-80  h-[80vh] w-[50vw]" fill="white" />
+      <Spotlight className="top-28 left-80  h-[80vh] w-[50vw]" fill="white" /> */}
 
       <div className="flex max-lg:gap-0 max-lg:flex-col relative z-30    items-center justify-center gap-16   w-[90%] max-xl:w-full">
         <div className=" max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:text-center -mt-16 max-xl:mt-0 w-[65%] max-lg:w-full">
