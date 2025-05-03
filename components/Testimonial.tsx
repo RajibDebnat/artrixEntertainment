@@ -20,24 +20,24 @@ export default function Testimonials() {
         <GridItem
           area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
           title="Video 2"
-          videoId="d3n8u3vwGZY"
+          videoId="s05iQAALKvb3n95C"
         />
         {/* ✅ Center full-height item */}
         <GridItem
           area="md:[grid-area:2/1/4/13] xl:[grid-area:1/5/3/8]"
           title="Video 3"
-          videoId="d3n8u3vwGZY"
+          videoId="PjAeu8Xbuh4g3tnv"
         />
         <GridItem
           area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
           title="Video 4"
-          videoId="d3n8u3vwGZY"
+          videoId="kgB4mmekf6_orYDq"
         />
       
         <GridItem
           area="md:[grid-area:3/7/4/13] xl:[grid-area:2/8/3/13]"
           title="Video 6"
-          videoId="d3n8u3vwGZY"
+          videoId="83RXYrqRLeM&t=7677s"
         />
       </ul>
     </section>
